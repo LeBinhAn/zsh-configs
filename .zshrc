@@ -30,22 +30,19 @@ function lla() {
 }
 
 # ZSH config alias
-alias sourcez='source ~/.zshrc'
-alias editz='vi ~/.zshrc'
-
-# Nvim alias
-alias vi='nvim'
+alias sz='source ~/.zshrc'
+alias ez='nvim ~/.zshrc'
 
 # Git related aliases
 alias eg='nvim ~/.gitconfig'
 
-# Nagivation aliases
-alias back='cd -'
-alias home='cd ~'
-alias cdcode='cd ~/Code'
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add fzf to the current shell
 eval "$(fzf --zsh)"
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# Load local zsh config
+[[ ! -f ~/.zshrc-local ]] || source ~/.zshrc-local
